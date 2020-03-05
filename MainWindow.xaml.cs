@@ -32,7 +32,7 @@ namespace wpfAssignment
             users.Clear();
             var watch = System.Diagnostics.Stopwatch.StartNew();
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.InitialDirectory = "D:\\Repositories";
+            //ofd.InitialDirectory = "C:\\";
             ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
 
             if (ofd.ShowDialog() == true)
@@ -51,7 +51,7 @@ namespace wpfAssignment
                 }
             }
             watch.Stop();
-            statusBar.Content = $"Last Load happended at: {DateTime.Now.ToString("HH:mm:ss")} - {users.Count.ToString("#,##")} users loaded in {watch.ElapsedMilliseconds}ms.";
+            statusBar.Content = $"Last Load happended at: {DateTime.Now.ToString("HH:mm:ss")} - {users.Count.ToString("#,##")} users loaded.";
         }
     }
 }
